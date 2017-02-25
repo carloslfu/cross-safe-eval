@@ -11,7 +11,7 @@ function ignoreErrors (fn) {
 
 test('safe eval function', function (t) {
 
-  t.plan(8)
+  t.plan(10)
 
   var safeEval1 = makeSafeEval()
 
@@ -29,5 +29,16 @@ test('safe eval function', function (t) {
 
   var safeEval2 = makeSafeEval(['Math'])
   t.equal(ignoreErrors(() => safeEval2('Math.PI')), Math.PI, 'should have access to global variables when included')
+
+  var fn = function () {
+    this.method = function () {
+      var safeEval3 = makeSafeEval()
+      t.equal(ignoreErrors(() => safeEval3('window')), undefined, 'should have no access to local this')
+      t.equal(ignoreErrors(() => safeEval3('console')), undefined, 'should have no access to local this')
+    }
+  }
+
+  a = new fn()
+  a.method()
 
 })

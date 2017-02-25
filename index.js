@@ -1,6 +1,7 @@
+var globalScope = global ? global : window // node.js and browser
+var globals = Object.getOwnPropertyNames(globalScope)
 
 module.exports = function makeSafeEval (include) {
-  var globals = Object.getOwnPropertyNames(this)
   var clearGlobals = ''
   for (var i = 0, len = globals.length; i < len; i++) {
     if (include && include.indexOf(globals[i]) === -1 || !include) {
