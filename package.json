@@ -1,0 +1,14 @@
+{
+  "name": "cross-safe-eval",
+  "version": "0.0.1",
+  "description": "Node.js and browser 8 lines implementation of a safe eval",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test.js"
+  },
+  "author": "Carlos Galarza <carloslfu@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "tape": "^4.6.3"
+  }
+}
