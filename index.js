@@ -1,5 +1,4 @@
-var globalScope = global ? global : window // node.js and browser
-var globals = Object.getOwnPropertyNames(globalScope)
+var globals = Object.getOwnPropertyNames(this)
 
 module.exports = function makeSafeEval (include) {
   var clearGlobals = ''

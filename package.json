@@ -1,6 +1,6 @@
 {
   "name": "cross-safe-eval",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Node.js and browser 8 lines implementation of a safe eval",
   "main": "index.js",
   "scripts": {
