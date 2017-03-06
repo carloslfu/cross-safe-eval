@@ -1,4 +1,6 @@
-# Cross safe eval
+# Cross safe eval (DEPRECATED)
+
+NOTE: this library is deprecated because a more simpler and totally secure solution is to use [JS-Interpreter]() library.
 
 Node.js and browser 12 lines implementation of a safe eval :), install this module if you want or hardcode it!
 
